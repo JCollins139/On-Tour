@@ -60,6 +60,5 @@ gem 'devise'
 gem 'foundation-rails', '~> 6.5.1'
 gem 'webpacker', '~> 3.3'
 gem 'font-awesome-sass'
-gem 'font-awesome-less'
 
 gem 'sprockets-es6'
