@@ -57,5 +57,7 @@ gem 'database_cleaner', group: [:development, :test]
 gem 'valid_attribute', group: [:development, :test]
 gem 'shoulda-matchers', group: [:development, :test], require: false
 gem 'devise'
-gem 'foundation-rails', '~> 5.0'
+gem 'foundation-rails', '~> 6.5.1'
 gem 'webpacker', '~> 3.3'
+
+gem 'sprockets-es6'
