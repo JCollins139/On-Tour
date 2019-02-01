@@ -1,52 +1,55 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>TheRealOnTour</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <%= stylesheet_link_tag "application" %>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text|ZCOOL+KuaiLe" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <%= javascript_include_tag "application" %>
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
-  <%= csrf_meta_tags %>
-</head>
-<body>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-  <nav class="top-bar">
-    <ul class="title-area">
-      <li class="name">
-        <h1><a href="/">The Real On Tour</a></h1>
-      </li>
-    </ul>
+  <body>
 
-    <section class="top-bar-section">
-      <ul class="right">
-        <%- if current_user -%>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-        <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-        <%- end -%>
-      </ul>
-    </section>
-  </nav>
+    <nav class="top-bar">
+      <div class="title-area">
 
-  <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
-      <%= value %>
-    </div>
-  <%- end -%>
+          <h1><a href="/">The Real On Tour</a></h1>
 
-  <%= yield %>
+      </div>
 
-  <%= javascript_include_tag 'application' %>
+      <section class="top-bar-section">
+        <div class="right">
+          <%- if current_user -%>
+            <h4><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></h4>
+          <%- else -%>
+            <h4><%= link_to 'Sign Up', new_user_registration_path %></h4>
+            <h4><%= link_to 'Sign In', new_user_session_path %></h4>
+          <%- end -%>
+        </div>
+      </section>
+    </nav>
 
-  <%- if Rails.env.development? || Rails.env.test? -%>
-    <%= javascript_tag do %>
-      window.railsEnv = '<%= Rails.env %>'
+    <%- flash.each do |key, value| -%>
+      <div class="flash flash-<%= key %>">
+        <%= value %>
+      </div>
     <%- end -%>
-  <%- end -%>
 
-  <%= yield :extra_footer %>
-</body>
+    <%= yield %>
+
+    <%= javascript_include_tag 'application' %>
+
+    <%- if Rails.env.development? || Rails.env.test? -%>
+      <%= javascript_tag do %>
+        window.railsEnv = '<%= Rails.env %>'
+      <%- end -%>
+    <%- end -%>
+
+    <%= yield :extra_footer %>
+  </body>
 </html>
