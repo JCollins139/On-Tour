@@ -1,10 +1,55 @@
+$hex:rgba(#4B00B5, .8);
 
-.top-bar h1 {
+
+
+.hover-underline-menu {
+  width: 100%;
+}
+
+.hover-underline-menu .menu {
+  background-color: #2C3840;
+}
+
+.hover-underline-menu .menu a {
+  color: #fefefe;
+  padding: 1.2rem 1.5rem;
+}
+
+.hover-underline-menu .menu .underline-from-center {
+  position: relative;
+}
+
+.hover-underline-menu .menu .underline-from-center::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 0.125rem);
+  border-bottom: 0.125rem solid #fefefe;
+  left: 50%;
+  right: 50%;
+  transition: all 0.5s ease;
+}
+
+.hover-underline-menu .menu .underline-from-center:hover::after {
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;
+}
+
+
+
+
+
+// --------------
+.top-bar h1 a{
+  background-color: $hex;
+  color: #AF3311;
   font-family: 'ZCOOL KuaiLe', cursive;
 }
 
-.top-bar-section h4 {
+.top-bar-section h4 a{
+  background-color: $hex;
   font-family: 'ZCOOL KuaiLe', cursive;
+  color: #AF3311;
 }
 
 .index-page {
@@ -15,7 +60,7 @@
   overflow: scroll;
    p {
     text-align: center;
-    background-color: #E6E6E6;
+    background-color: #DCDFE2;
   }
 }
 
