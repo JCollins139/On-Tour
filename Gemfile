@@ -62,5 +62,6 @@ gem 'webpacker', '~> 3.3'
 gem 'font-awesome-sass'
 gem 'bootstrap', '~> 4.0.0'
 gem 'petergate', '~> 1.7'
+gem 'kaminari', '~> 1.0', '>= 1.0.1'
 
 gem 'sprockets-es6'
