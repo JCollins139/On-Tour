@@ -11,16 +11,16 @@
             <%= link_to (fa_icon"newspaper"), blogs_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><%= fa_icon "headphones" %></a>
+            <%= link_to (fa_icon"headphones"), "https://music.com/", class: 'nav-link', :target => "_blank" %>          
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#"><%= fa_icon "soundcloud" %></a>
+            <%= link_to (fa_icon"soundcloud"), "https://soundcloud.com/", class: 'nav-link', :target => "_blank" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#"><%= fa_icon "instagram" %></a>
+            <%= link_to (fa_icon"instagram"), "https://instagram.com/", class: 'nav-link', :target => "_blank" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#"><%= fa_icon "facebook" %></a>
+            <%= link_to (fa_icon"facebook"), "https://facebook.com/", class: 'nav-link', :target => "_blank" %>
           </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
