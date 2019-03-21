@@ -63,5 +63,5 @@ gem 'font-awesome-rails'
 gem 'bootstrap', '>= 4.3.1'
 gem 'petergate', '~> 1.7'
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
-
+gem 'friendly_id', '~> 5.1.0'
 gem 'sprockets-es6'
