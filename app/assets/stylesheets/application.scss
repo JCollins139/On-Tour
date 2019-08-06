@@ -2,6 +2,237 @@
 @import "font-awesome";
 
 
+// BrewThru color scheme
+// #49F4E9 = bright blue
+// #FF75A7 = hot pink
+// #F4AF4E = bright orange
+// #A1F981 = lime green
+// #E5EA4D = yellow green
+// #F9F89F = pale yellow
+
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  // height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+h3 {
+  color: #F4AF4E;
+}
+
+h1 {
+  color: #dc008b;
+}
+
+.cover-container {
+  max-width: 55em;
+}
+
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+          box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+  text-align: center;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.cover-container p {
+  padding-top: 2em;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 2rem;
+}
+
+/*
+ * Header
+ */
+.masthead .masthead-brand {
+  margin-bottom: auto;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+  margin-right: 2rem;
+  color: #64B2C8;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: #A1F981;
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: #A1F981;
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #F9F89F;
+  border-bottom-color: #F9F89F;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+.greeting p {
+  color: #F9F89F;
+}
+
+.cover-container p {
+  color: #F9F89F;
+}
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, .5);
+}
+
+/*
+ * Custom Styles
+ */
+
+.card-block {
+  text-align: left;
+  color: black;
+}
+
+.card {
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.auth-links a {
+  color: black;
+}
+
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+  margin-top: 8rem;
+}
+
+.greeting {
+  margin: 0 auto;
+  float: none;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.about-brief {
+  margin: 0 auto;
+  float: none;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.nav-link {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#pro-pic {
+  transform: rotate(90deg);
+}
+
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: image-url('vapor-mountain2.jpg') no-repeat;
+  background-size: cover;
+}
+
+.inner {
+  padding-top: 3em;
+}
+
+
 /* stylelint-disable selector-list-comma-newline-after */
 
 .blog-header {

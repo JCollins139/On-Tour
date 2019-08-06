@@ -9,8 +9,11 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
-//= require bootstrap-sprockets
-//= require rails-ujs
+//= require jquery3
+//= require jquery_ujs
+//= require jquery-ui
+//= require jquery-ui/widgets/sortable
 //= require activestorage
-//= require_tree .
+//= require cocoon
+//= require gritter
+//= require bootstrap-sprockets

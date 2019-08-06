@@ -15,29 +15,21 @@
   </head>
 
   <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <%= video_tag(
+           'vapor-road2.mp4',
+           id: 'background',
+           autoplay: true,
+           loop: true,
+           muted: true,
+           poster: 'vapor-mountain2.jpg'
+           ) %>
 
-
-    <%- flash.each do |key, value| -%>
-      <div class="flash flash-<%= key %>">
-        <%= value %>
+           <%= yield %>
+        </div>
       </div>
-    <%- end -%>
-
-    <%= yield %>
-
-    <%= javascript_include_tag 'application' %>
-
-    <%- if Rails.env.development? || Rails.env.test? -%>
-      <%= javascript_tag do %>
-        window.railsEnv = '<%= Rails.env %>'
-      <%- end -%>
-    <%- end -%>
-
-    <%= yield :extra_footer %>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    </div>
   </body>
 </html>
