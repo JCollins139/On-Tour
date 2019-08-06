@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  layout "blog"
   access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
 
   # GET /blogs
