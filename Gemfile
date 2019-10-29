@@ -56,7 +56,7 @@ gem 'factory_bot', group: [:development, :test]
 gem 'database_cleaner', group: [:development, :test]
 gem 'valid_attribute', group: [:development, :test]
 gem 'shoulda-matchers', group: [:development, :test], require: false
-gem 'devise', '~> 4.6'
+gem 'devise', '~> 4.7'
 gem 'ostruct', '~> 0.1.0'
 gem 'webpacker', '~> 3.3'
 gem 'font-awesome-rails'
